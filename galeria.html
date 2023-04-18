@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>galeria</title>
+</head>
+<body>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      defer
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      defer
+    ></script>
+    <link rel="stylesheet" href="galeria.css" />
+  </head>
+  <body>
+    <nav>
+      <ul class="logo">
+        <li class="logo-icon">
+          <a href="https://pl-pl.facebook.com/" ><ion-icon name="logo-facebook" class="logo-icon-fb"></ion-icon></a>
+          <a href="https://discord.com/"><ion-icon name="logo-discord" class="logo-icon-dc"></ion-icon></a>
+          <a href="https://www.instagram.com/"><ion-icon name="logo-instagram" class="logo-icon-ig"></ion-icon></a>
+        </li>
+      </ul>
+      <ul class="menu">
+        <li class="list">
+          <a href="main page.html">
+            <span class="icon">
+              <ion-icon name="home-outline"></ion-icon>
+            </span>
+            <span class="text">Home</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="cv.html">
+            <span class="icon">
+              <ion-icon name="person-outline"></ion-icon>
+            </span>
+            <span class="text">O Nas</span>
+          </a>
+        </li>
+        <li class="list active">
+          <a href="galeria.html">
+            <span class="icon">
+            <ion-icon name="images-outline"></ion-icon>
+          </span>
+            <span class="text">Galeria</span>
+          </a>
+        </li>
+        <li class="list ">
+          <a href="cennik.html">
+            <span class="icon">
+              <ion-icon name="airplane-outline"></ion-icon>
+            </span>
+            <span class="text">Cennik</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="login.html">
+            <span class="icon">
+              <ion-icon name="call-outline"></ion-icon>
+            </span>
+            <span class="text">Kontact</span>
+          </a>
+        </li>
+        <div class="indicator"></div>
+      </ul>
+    </nav>
+    <div class="zdj">
+        <div class="zdjecia1">
+            <div class="mamdosc1"><h1>F4 Phantom w naprawie</h1><br>Teraz Mozna zobaczyć samolot w różnych etapach naprawy, gdyż naprawa odbywa się na zewnątrz hangaru </div>
+        </div>
+        <div class="zdjecia2">
+            <div class="mamdosc2"><h1>F-18 jako nowa atrakcja</h1><br>F-18 dołączył do naszej kolekcji i jest możliwy do zwiedzania już od 21 kwietnia 2023r.</div>
+        </div>
+        <div class="zdjecia3">
+            <div class="mamdosc3"><h1>Symulator Miga</h1><br>symulator MIga 19 zostanie zrealizowany z prawdziwego kokpitu miga-19 z naszej kolekcji</div>
+        </div>
+    </div>
+    <div class="stopka">
+        <div class="przyciski">
+          <div id="home"><a href="main page.html">Home</a></div>
+          <div id="onas"><a href="cv.html" target="_blank">O nas</a></div>
+          <div id="oferta"><a href="#" target="_blank">Galeria</a></div>
+          <div id="blog"><a href="cennik.html" target="_blank">Cennik</a></div>
+          <div id="kontakt"><a href="login.html" target="_blank">Kontakt</a></div>
+        </div>
+        <div id="copyright"> To co hucznie nazwaliście stroną zrobił Krzysztof Nowak</div>
+    <script>
+        const list = document.querySelectorAll('.list');
+  
+  function activeLink (){
+      list.forEach((item)=> 
+      item.classList.remove('active'));
+      this.classList.add('active');
+  }
+  
+  list.forEach((item)=>
+  item.addEventListener('mouseover', activeLink));
+      </script>
+</body>
+</html>

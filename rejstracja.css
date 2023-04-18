@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .login_form_container{
+      position: relative;
+      width: 400px;
+      height: 570px;
+      max-width: 400px;
+      max-height: 570px;
+      background: #9dabac;
+      border-radius: 50px 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-top: 70px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .login_form_container::after{
+      
+      position: absolute;
+      width: 470%;
+      height: 270%;
+      content: '';
+      background-image: conic-gradient(transparent, transparent, transparent, #EB6440);
+      animation: rotate_border 6s linear infinite;
+      animation-delay: -3s;
+  }
+  @keyframes rotate_border{
+      0%{
+          transform: rotate(0deg);
+      }
+      100%{
+          transform: rotate(360deg);
+      }
+  }
+  .login_form{
+      position: absolute;
+      content: '';
+      background-color: #b0e4e788;
+      border-radius: 50px 5px;
+      inset: 5px;
+      padding: 50px 40px;
+      z-index: 10;
+      color: #4e4e4e;
+  
+  } 
+  h2{
+      font-size: 40px;
+      font-weight: 600;
+      text-align: center;
+  }
+  .input_group{
+      margin-top: 40px;
+      position:relative;
+      display:flex;
+      align-items: center;
+      justify-content: start;
+  }
+  .input_text{
+      width: 95%;
+      height: 30px;
+      background: transparent;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid #D6E4E5;
+      font-size: 20px;
+      padding-left: 10px;
+      color: #EB6440;
+  
+  }
+  ::placeholder{
+      font-size: 15px;
+      color: #EB6440;
+      letter-spacing: 1px;
+  
+  }
+  .fa{
+      font-size: 20px;
+  
+  }
+  #login_button{
+      position: relative;
+      width: 300px;
+      height: 40px;
+      transition: 1s;
+      margin-top: 70px;
+  
+  
+  }
+  #login_button a{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      z-index: 10;
+      cursor: pointer;
+      font-size: 22px;
+      letter-spacing: 2px;
+      border: 1px solid #EB6440;
+      border-radius: 50px;
+      background-color: #84d1dbab;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .glowIcon {
+      text-shadow: 0 0 10px #00ccff;
+  
+  }
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --kolor1: #0e497a;
+  --kolor2: #1c79b8; 
+  --kolor3: #8965c4; 
+  --kolor4: #84d1db; 
+  --kolor5: #ecb2de; 
+}
+
+body {
+  min-height: 100vh;
+  background: rgb(239,245,245);
+  background: linear-gradient(180deg, rgba(239,245,245,1) 0%, rgba(233,241,241,1) 50%, rgba(73,113,116,1) 100%);
+}
+body nav {
+  width: 100%;
+  height: 70px;
+  background: #D6E4E5;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+  padding-right: 10px;
+}
+.logo{
+  width: 65%;
+  display: flex;
+  justify-content: left;
+}
+.logo-icon{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 20%;
+}
+.logo ion-icon{
+  font-size: 2em;
+  text-align: center;
+  transition: 0.5s;
+  cursor: pointer;
+  color: var(--kolor2);
+}
+.logo-icon .logo-icon-fb:hover{
+  color: rgb(66 103 178);
+}
+.logo-icon .logo-icon-dc:hover{
+  color: #7289da;
+}
+.logo-icon .logo-icon-ig:hover{
+  color: #fa7e1e;
+}
+body nav ul li {
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+body nav .menu li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+body nav .menu li a .icon {
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  transition: 0.5s;
+  color: var(--kolor1);
+}
+body nav .menu li a .text {
+  position: absolute;
+  color: var(--kolor2);
+  font-weight: 600;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(-25px);
+}
+body nav .menu li.active a .icon {
+  transform: translateY(32px);
+}
+body nav .menu li.active a .text {
+  opacity: 1;
+  transform: translateY(-15px);
+}
+body nav .menu li:nth-child(1).active ~ .indicator {
+  transform: translateX(0%);
+}
+body nav .menu li:nth-child(2).active ~ .indicator {
+  transform: translateX(147px);
+}
+body nav .menu li:nth-child(3).active ~ .indicator {
+  transform: translateX(295px);
+}
+body nav .menu li:nth-child(4).active ~ .indicator {
+  transform: translateX(438px);
+}
+body nav .menu li:nth-child(5).active ~ .indicator {
+  transform: translateX(586px);
+}
+body nav .indicator {
+  position: absolute;
+  top: 49%;
+  width: 70px;
+  height: 70px;
+  background: #D6E4E5;
+  border-radius: 50%;
+  border: 5px solid #EB6440;
+  transition: 0.5s;
+}
+.stopka{
+  width: 100%;
+  height: 150px;
+  background-color:rgb(135, 159, 168);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 20px 40px 20px;
+  margin-top: 10%;
+}
+.przyciski{
+  width:80%;
+  height: 100px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+  margin: auto;
+  font-weight: bolder;
+}
+.orzyciski a:visited{
+  color: white;
+  }
+.przyciski a{
+  color: white;
+  text-decoration:none
+}
+#home{
+  margin: 20px;
+  cursor: pointer;
+  color: white;
+}
+#onas{
+  margin: 20px;
+  cursor: pointer;
+}
+#oferta{
+  margin: 20px;
+  cursor: pointer;
+}
+#blog{
+  margin: 20px;
+  cursor: pointer;
+}
+#kontakt{
+  margin: 20px;
+  cursor: pointer;
+}
+#copyright{
+  color: white;
+  cursor: pointer;
+  font-weight: bolder;
+}  
+.map{
+  margin-top: -550px;
+  height: 470px;
+  margin-left: 190px;
+}
+.tekst{
+  height: 470px;
+  width:500px ;
+  margin-left: 1250px;
+  margin-top: -490px;
+  background-color: #0e497a0e;
+  padding: 2%;
+  font-size: 24px;
+  color: #EB6440;
+  line-height: 70px;
+}
+.tekst h1{
+  color: #0e497a;
+}
+.login_form_container a{
+    text-decoration: none;
+    color: #0e497a;
+    margin-top: -10px;
+  }

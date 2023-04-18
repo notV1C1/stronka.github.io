@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --kolor1: #0e497a;
+  --kolor2: #1c79b8; 
+  --kolor3: #8965c4; 
+  --kolor4: #84d1db; 
+  --kolor5: #ecb2de; 
+}
+
+body {
+  min-height: 100vh;
+  background: rgb(239,245,245);
+  background: linear-gradient(180deg, rgba(239,245,245,1) 0%, rgba(233,241,241,1) 50%, rgba(73,113,116,1) 100%);
+}
+body nav {
+  width: 100%;
+  height: 70px;
+  background: #D6E4E5;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+  padding-right: 10px;
+}
+.logo{
+  width: 65%;
+  display: flex;
+  justify-content: left;
+}
+.logo-icon{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 20%;
+}
+.logo ion-icon{
+  font-size: 2em;
+  text-align: center;
+  transition: 0.5s;
+  cursor: pointer;
+  color: var(--kolor2);
+}
+.logo-icon .logo-icon-fb:hover{
+  color: rgb(66 103 178);
+}
+.logo-icon .logo-icon-dc:hover{
+  color: #7289da;
+}
+.logo-icon .logo-icon-ig:hover{
+  color: #fa7e1e;
+}
+body nav ul li {
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+body nav .menu li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+body nav .menu li a .icon {
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  transition: 0.5s;
+  color: var(--kolor1);
+}
+body nav .menu li a .text {
+  position: absolute;
+  color: var(--kolor2);
+  font-weight: 600;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(-25px);
+}
+body nav .menu li.active a .icon {
+  transform: translateY(32px);
+}
+body nav .menu li.active a .text {
+  opacity: 1;
+  transform: translateY(-15px);
+}
+body nav .menu li:nth-child(1).active ~ .indicator {
+  transform: translateX(0%);
+}
+body nav .menu li:nth-child(2).active ~ .indicator {
+  transform: translateX(147px);
+}
+body nav .menu li:nth-child(3).active ~ .indicator {
+  transform: translateX(295px);
+}
+body nav .menu li:nth-child(4).active ~ .indicator {
+  transform: translateX(438px);
+}
+body nav .menu li:nth-child(5).active ~ .indicator {
+  transform: translateX(586px);
+}
+body nav .indicator {
+  position: absolute;
+  top: 49%;
+  width: 70px;
+  height: 70px;
+  background: #D6E4E5;
+  border-radius: 50%;
+  border: 5px solid #EB6440;
+  transition: 0.5s;
+}
+.stopka{
+    width: 100%;
+    margin-top: 50px;
+    height: 150px;
+    background-color:rgb(135, 159, 168);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 20px 40px 20px;
+  }
+  .przyciski{
+    width:80%;
+    height: 100px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    margin: auto;
+    font-weight: bolder;
+  }
+  .orzyciski a:visited{
+    color: white;
+    }
+  .przyciski a{
+    color: white;
+    text-decoration:none
+  }
+  #home{
+    margin: 20px;
+    cursor: pointer;
+    color: white;
+  }
+  #onas{
+    margin: 20px;
+    cursor: pointer;
+  }
+  #oferta{
+    margin: 20px;
+    cursor: pointer;
+  }
+  #blog{
+    margin: 20px;
+    cursor: pointer;
+  }
+  #kontakt{
+    margin: 20px;
+    cursor: pointer;
+  }
+  #copyright{
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+  }  
+  .zdj{
+    height: 700px;
+    width: 100%;
+    margin-top: 50px;
+    padding: 2%;
+    align-items: center;
+  }
+  .zdjecia1{
+    background-image: url(https://dlapilota.pl/sites/default/files/styles/article_cover/public/media/images/2023-01/F-4E%20%27Phantom%27%20-%20nowy%20eksponat%20w%20Muzeum%20Lotnictwa%20Polskiego%20w%20Krakowie%20%28fot.%20muzeumlotnictwa.pl%29.jpg?itok=M0pFXLsW);
+    height: 100%;
+    width: 30%;
+    float: left;
+    margin-left: 3%;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 25px 0px rgba(66, 68, 90, 1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .zdjecia2{
+    background-image: url(https://d-art.ppstatic.pl/kadry/k/r/95/9d/624b3024eb3d9_o_large.jpg);
+    height: 100%;
+    width: 30%;
+    float: left;
+    margin-left: 2%;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 25px 0px rgba(66, 68, 90, 1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .zdjecia3{
+    background-image: url(https://dlapilota.pl/sites/default/files/styles/article_cover/public/media/images/2022-06/MiG-19%20odnowiony%20-%20prezentowany%20w%20Muzeum%20Lotnictwa%20Polskiego%20%28fot.%20Muzeum%20Lotnictwa%20Polskiego%29.jpg?itok=Jz_JCf7y);
+    height: 100%;
+    width: 30%;
+    float: left;
+    margin-left: 2%;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 25px 0px rgba(66, 68, 90, 1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+  }
+  .mamdosc1{
+    position: relative;
+    width: 100%;
+    height: 30%;
+    background-color: #eb65403a;
+    text-align: center;
+    color: white;
+    margin-top: 80%;
+  }
+  .mamdosc2{
+    position: relative;
+    width: 100%;
+    height: 30%;
+    background-color: #eb65403a;
+    text-align: center;
+    color: white;
+    margin-top: 80%;
+  }
+
+  .mamdosc3{
+    position: relative;
+    width: 100%;
+    height: 30%;
+    background-color: #eb65403a;
+    text-align: center;
+    color: white;
+    margin-top: 80%;
+  }
+  .zdjecia1:hover .mamdosc1{
+    scale: 1.01;
+    font-size: 20px;
+    transition: 0.3s;
+  }
+  .zdjecia2:hover .mamdosc2{
+    scale: 1.01;
+    font-size: 20px;
+    transition: 0.3s;
+  }
+  .zdjecia3:hover .mamdosc3{
+    scale: 1.01;
+    font-size: 20px;
+    transition: 0.3s;
+  }
+
+
+
